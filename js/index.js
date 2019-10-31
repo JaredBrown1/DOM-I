@@ -60,6 +60,25 @@ navLinks[5].textContent = "Contact";
 const nav= document.querySelector("nav");
 nav.append(navLinks[0, 1, 2, 3, 4, 5]);
 
+//prepend
+const newContent = document.createElement("a");
+newContent.textContent = "Hello";
+const parentElement = document.querySelector("nav");
+parentElement.prepend(newContent);
+
+//append
+const newContentTwo = document.createElement("a");
+newContentTwo.textContent = "Whats up!";
+parentElement.appendChild(newContentTwo);
+
+
+navLinks.forEach(element => {
+  element.style.color = "green";
+  
+});
+
+
+
 let firstText = document.querySelector(".cta-text h1");
 firstText.textContent = siteContent.cta.h1;
 
