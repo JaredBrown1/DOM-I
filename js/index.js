@@ -45,6 +45,20 @@ logo.setAttribute('src', siteContent["nav"]["img-src"]);
 // Array.from(Links).forEach(link => {
 //   link.textContent = nav.nav-item-1;
 // });
+//let navB = querySelectorAll('a');
+
+// NavBar
+const navLinks = document.querySelectorAll("a");
+// inserting text
+navLinks[0].textContent = "Services";
+navLinks[1].textContent = "Product";
+navLinks[2].textContent = "Vision";
+navLinks[3].textContent = "Features";
+navLinks[4].textContent = "About";
+navLinks[5].textContent = "Contact";
+// attaching to nav
+const nav= document.querySelector("nav");
+nav.append(navLinks[0, 1, 2, 3, 4, 5]);
 
 let firstText = document.querySelector(".cta-text h1");
 firstText.textContent = siteContent.cta.h1;
@@ -57,6 +71,7 @@ secImg.setAttribute("src", siteContent["cta"]["img-src"]);
 
 let mainContent = siteContent["main-content"];
 
+//headers
 let firstHeader = document.querySelectorAll("h4");
 firstHeader[0].textContent = mainContent["features-h4"];
 firstHeader[1].textContent = mainContent["about-h4"];
@@ -65,6 +80,8 @@ firstHeader[3].textContent = mainContent["product-h4"];
 firstHeader[4].textContent = mainContent["vision-h4"];
 firstHeader[5].textContent = siteContent.contact["contact-h4"];
 
+
+//paragraphs
 let paragraph = document.querySelectorAll("p");
 paragraph[0].textContent = mainContent["features-content"];
 paragraph[1].textContent = mainContent["about-content"];
