@@ -39,4 +39,87 @@ const siteContent = {
 
 // Example: Update the img src for the logo
 let logo = document.getElementById("logo-img");
-logo.setAttribute('src', siteContent["nav"]["img-src"])
+logo.setAttribute('src', siteContent["nav"]["img-src"]);
+
+// let Links = document.getElementsByClassName("nav");
+// Array.from(Links).forEach(link => {
+//   link.textContent = nav.nav-item-1;
+// });
+//let navB = querySelectorAll('a');
+
+// NavBar
+const navLinks = document.querySelectorAll("a");
+// inserting text
+navLinks[0].textContent = "Services";
+navLinks[1].textContent = "Product";
+navLinks[2].textContent = "Vision";
+navLinks[3].textContent = "Features";
+navLinks[4].textContent = "About";
+navLinks[5].textContent = "Contact";
+// attaching to nav
+const nav= document.querySelector("nav");
+nav.append(navLinks[0, 1, 2, 3, 4, 5]);
+
+//prepend
+const newContent = document.createElement("a");
+newContent.textContent = "Hello";
+const parentElement = document.querySelector("nav");
+parentElement.prepend(newContent);
+
+//append
+const newContentTwo = document.createElement("a");
+newContentTwo.textContent = "Whats up!";
+parentElement.appendChild(newContentTwo);
+
+
+navLinks.forEach(element => {
+  element.style.color = "green";
+  
+});
+
+
+
+let firstText = document.querySelector(".cta-text h1");
+firstText.textContent = siteContent.cta.h1;
+
+let secText = document.querySelector(".cta-text button");
+secText.textContent = siteContent.cta.button;
+
+let secImg = document.getElementById("cta-img");
+secImg.setAttribute("src", siteContent["cta"]["img-src"]);
+
+let mainContent = siteContent["main-content"];
+
+//headers
+let firstHeader = document.querySelectorAll("h4");
+firstHeader[0].textContent = mainContent["features-h4"];
+firstHeader[1].textContent = mainContent["about-h4"];
+firstHeader[2].textContent = mainContent["services-h4"];
+firstHeader[3].textContent = mainContent["product-h4"];
+firstHeader[4].textContent = mainContent["vision-h4"];
+firstHeader[5].textContent = siteContent.contact["contact-h4"];
+
+
+//paragraphs
+let paragraph = document.querySelectorAll("p");
+paragraph[0].textContent = mainContent["features-content"];
+paragraph[1].textContent = mainContent["about-content"];
+paragraph[2].textContent = mainContent["services-content"];
+paragraph[3].textContent = mainContent["product-content"];
+paragraph[4].textContent = mainContent["vision-content"];
+paragraph[5].textContent = mainContent["contact-content"];
+
+let threeImg = document.getElementById("middle-img");
+threeImg.setAttribute("src", siteContent["main-content"]["middle-img-src"]);
+
+let contactContent = siteContent["contact"];
+
+let contact = document.querySelectorAll(".contact p");
+contact[0].textContent = contactContent.address;
+contact[1].textContent = contactContent.phone;
+contact[2].textContent = contactContent.email;
+
+
+
+
+
